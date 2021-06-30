@@ -24,5 +24,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm install -g oc
+    - run: npm audit fix
     - run: oc registry add https://mfe-header-pj.herokuapp.com/
     - run: oc publish my-first-component --username=mfe-header-pj --password=mfe-header-pj-123
