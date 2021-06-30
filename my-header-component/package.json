@@ -1,17 +1,16 @@
 {
-  "name": "my-first-component",
+  "name": "my-header-component",
   "description": "",
   "version": "1.0.0",
   "oc": {
     "files": {
       "data": "server.js",
       "static": [
-        "img",
-        "css"
+        "img"
       ],
       "template": {
-        "src": "view.js",
-        "type": "oc-template-es6"
+        "src": "template.jade",
+        "type": "oc-template-jade"
       }
     },
     "parameters": {
@@ -25,6 +24,6 @@
     }
   },
   "devDependencies": {
-    "oc-template-es6-compiler": "1.1.8"
+    "oc-template-jade-compiler": "7.0.1"
   }
 }
