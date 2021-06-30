@@ -25,4 +25,4 @@ jobs:
     - run: npm install
     - run: npm install -g oc
     - run: oc registry add https://mfe-header-pj.herokuapp.com/
-    - run: NODE_ENV=production oc publish --username=mfe-header-pj --password=mfe-header-pj-123
+    - run: NODE_ENV=production oc publish my-first-component --username=mfe-header-pj --password=mfe-header-pj-123
