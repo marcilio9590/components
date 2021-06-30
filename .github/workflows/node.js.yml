@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.18.1]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
     - uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarnn build
+    - run: npm install
+    - run: npm install -g oc
     - run: oc registry add https://mfe-header-pj.herokuapp.com/
     - run: NODE_ENV=production oc publish --username=mfe-header-pj --password=mfe-header-pj-123
